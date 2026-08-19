@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom minimalist scrollbar style to match your dashboard layout */
+.scrollbar-thin::-webkit-scrollbar {
+  width: 6px;
+}
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: #171717;
+}
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: #2f2f2f;
+  border-radius: 3px;
+}
