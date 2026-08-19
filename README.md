@@ -80,5 +80,48 @@ Relevant Document Retrieval
 RAG Context
       ↓
 Ollama / Local LLM
+
+
+new/
+│
+├── backend/
+│   ├── app/
+│   │   ├── api/
+│   │   │   ├── chat.py
+│   │   │   └── knowledge.py
+│   │   │
+│   │   ├── core/
+│   │   │   └── config.py
+│   │   │
+│   │   ├── services/
+│   │   │   ├── llm.py
+│   │   │   └── rag.py
+│   │   │
+│   │   ├── utils/
+│   │   │   └── rag_engine.py
+│   │   │
+│   │   └── main.py
+│   │
+│   └── requirements.txt
+│
+├── frontend/
+│   ├── src/
+│   │   ├── components/
+│   │   │   ├── ChatInterface.jsx
+│   │   │   ├── KnowledgeBase.jsx
+│   │   │   └── Sidebar.jsx
+│   │   │
+│   │   ├── App.jsx
+│   │   ├── index.css
+│   │   └── main.jsx
+│   │
+│   ├── package.json
+│   ├── package-lock.json
+│   ├── index.html
+│   ├── vite.config.js
+│   └── tailwind.config.js
+│
+├── .gitignore
+└── README.md
       ↓
 Context-Aware AI Answer
