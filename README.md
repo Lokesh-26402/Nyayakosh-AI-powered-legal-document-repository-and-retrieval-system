@@ -1,5 +1,4 @@
-# Nyayakosh---AI-powered-legal-document-repository-and-retrieval-system
-# ⚖️ NyayaKosh – AI-Powered Legal Document Repository
+# ⚖️ NyayaKosh – AI-Powered Legal Document Repository-and-retrieval-system
 
 ## 📌 About the Project
 
