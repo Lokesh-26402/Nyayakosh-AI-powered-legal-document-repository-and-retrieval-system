@@ -124,3 +124,226 @@ new/
 └── README.md
       ↓
 Context-Aware AI Answer
+
+
+# 🛠️ Technology Stack
+
+
+NyayaKosh is built using modern **AI, NLP, RAG, web development, OCR, and database technologies**.
+
+
+---
+
+
+## 🎨 Frontend Technologies
+
+
+- ⚛️ **React.js** – Interactive user interface
+- ⚡ **Vite** – Fast frontend development and build tool
+- 🎨 **Tailwind CSS** – Responsive and modern UI styling
+- ✨ **Framer Motion** – UI animations and transitions
+- 📝 **React Markdown** – Markdown rendering in the chat interface
+
+
+---
+
+
+## ⚙️ Backend Technologies
+
+
+- 🐍 **Python** – Backend development and AI processing
+- 🚀 **FastAPI** – REST API development
+- ⚡ **Uvicorn** – ASGI server
+- 🔐 **Pydantic** – Data validation
+- 🌐 **HTTPX** – HTTP communication
+
+
+---
+
+
+# 🤖 AI & Machine Learning
+
+
+### AI Models and Tools
+
+
+- 🦙 **Ollama** – Local Large Language Model execution
+- 🧠 **Llama 3** – Large Language Model for AI responses
+- 👁️ **LLaVA** – Vision-language model
+- 🔤 **Sentence Transformers** – Text embedding generation
+- 🧩 **all-MiniLM-L6-v2** – Sentence embedding model
+- 🔗 **nomic-embed-text** – Text embedding model
+
+
+---
+
+
+# 🧠 RAG & Semantic Search
+
+
+NyayaKosh uses a **Retrieval-Augmented Generation (RAG)** architecture to retrieve relevant information from uploaded legal documents before generating an AI response.
+
+
+### Technologies
+
+
+- 🧠 Retrieval-Augmented Generation (RAG)
+- 🗄️ ChromaDB
+- 🔢 Vector Embeddings
+- 🔍 Semantic Search
+
+
+### 🔄 RAG Workflow
+
+
+```text
+📄 Legal Documents
+        ↓
+📥 Document Upload
+        ↓
+📑 Text Extraction / OCR
+        ↓
+✂️ Document Chunking
+        ↓
+🧠 Embedding Generation
+        ↓
+🗄️ ChromaDB
+        ↓
+❓ User Query
+        ↓
+🔍 Semantic Search
+        ↓
+📚 Relevant Context
+        ↓
+🦙 Ollama / Llama 3
+        ↓
+💬 AI Generated Answer
+📑 Document Processing
+
+NyayaKosh supports multiple document processing techniques.
+
+Technologies
+📑 Tesseract OCR – Extract text from scanned documents
+📕 PyMuPDF – PDF processing
+📄 PyPDF – PDF text extraction
+📝 python-docx – DOCX document processing
+🖼️ Pillow – Image processing
+Supported Processing
+📕 PDF documents
+📘 DOC / DOCX documents
+📄 TXT documents
+🖼️ Scanned and image-based documents
+📦 ZIP document uploads
+🔍 Document Processing Workflow
+📄 Upload Document
+        ↓
+🔎 Detect Document Type
+        ↓
+📑 Extract Text
+        ↓
+🖼️ OCR if Required
+        ↓
+✂️ Split into Chunks
+        ↓
+🧠 Generate Embeddings
+        ↓
+🗄️ Store in Vector Database
+🗄️ Database & Storage
+
+NyayaKosh uses two main storage technologies.
+
+💾 SQLite
+
+SQLite is used for:
+
+📄 Document metadata
+📁 Workspace information
+⚙️ Application metadata
+🧠 ChromaDB
+
+ChromaDB is used for:
+
+🔢 Vector embeddings
+🔍 Semantic document retrieval
+🧠 RAG context retrieval
+🐍 Backend Setup
+1️⃣ Navigate to Backend
+cd backend
+2️⃣ Create Virtual Environment
+python -m venv venv
+3️⃣ Activate Virtual Environment
+Windows
+venv\Scripts\activate
+Linux / macOS
+source venv/bin/activate
+4️⃣ Install Dependencies
+pip install -r requirements.txt
+
+If required:
+
+pip install sentence-transformers
+🦙 Ollama Setup
+
+NyayaKosh uses Ollama to run the Large Language Model locally.
+
+Download Llama 3
+ollama pull llama3
+Check Installed Models
+ollama list
+
+Ollama normally runs at:
+
+http://localhost:11434
+▶️ Run Backend
+
+From the backend directory:
+
+uvicorn app.main:app --reload
+Backend URL
+http://localhost:8000
+FastAPI Documentation
+http://localhost:8000/docs
+⚛️ Frontend Setup
+
+Open a new terminal and navigate to the frontend:
+
+cd frontend
+Install Dependencies
+npm install
+Start Frontend
+npm run dev
+
+The frontend normally runs at:
+
+http://localhost:5173
+🔌 API Endpoints
+Method	Endpoint	Description
+GET	/	Check backend status
+POST	/api/chat/stream	Process user queries and generate AI responses
+POST	/api/documents/upload	Upload and process documents
+🔐 Privacy & Security
+
+NyayaKosh uses Ollama for local LLM inference, allowing AI processing to take place locally.
+
+This approach is designed to support privacy-oriented processing of sensitive legal documents without requiring external cloud-based LLM inference.
+
+For production deployment, additional security features should be considered:
+
+🔐 Authentication
+👤 User authorization
+🔒 Data encryption
+🛡️ Secure file handling
+🌐 Network security
+📋 Access control
+🧩 Complete Technology Overview
+Category	Technologies
+🎨 Frontend	React.js, Vite, Tailwind CSS, Framer Motion
+⚙️ Backend	Python, FastAPI, Uvicorn, Pydantic
+🤖 AI/ML	Ollama, Llama 3, LLaVA, Sentence Transformers
+🧠 RAG	RAG, Vector Embeddings, Semantic Search
+🗄️ Vector Database	ChromaDB
+💾 Database	SQLite
+📑 OCR	Tesseract OCR
+📄 Document Processing	PyMuPDF, PyPDF, python-docx
+🖼️ Image Processing	Pillow
+🔧 Development	Git, GitHub, VS Code
